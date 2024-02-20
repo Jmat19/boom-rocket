@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private bool isGrounded;
 
+    [SerializeField]
+    private bool canDoubleJump;
+
     private Vector3 forceDirection;
 
     InputSystem inputActions;
@@ -50,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
             isGrounded = false;
+        }
+        else if (canDoubleJump)
+        {
+            rb.velocity = Vector3.up * jumpSpeed;
+            canDoubleJump = false;
         }
     }
 
