@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,9 +17,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 _direction;
 
     [SerializeField] private float smoothTime = 0.05f;
-    private float _currentVelocity;
+    //private float _currentVelocity;
+    private Camera _mainCamera;
+    [SerializeField] private float rotationSpeed = 500f;
 
     [SerializeField] private float speed;
+    [SerializeField] private Movement movement;
 
     [SerializeField] private float jumpStrength;
     private int _numberOfJumps;
@@ -27,13 +31,14 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        _mainCamera = Camera.main;
     }
 
     //Updates everytime the player moves and turns in a direction | Use of gravity on player
     private void Update()
     {
-        ApplyGravity();
         ApplyRotation();
+        ApplyGravity();
         ApplyMovement();
     }
 
@@ -55,14 +60,22 @@ public class PlayerController : MonoBehaviour
     {
         if (_input.sqrMagnitude == 0) return;
 
-        var targetAngle = Mathf.Atan2(_direction.x, _direction.z) * Mathf.Rad2Deg;
+        _direction = Quaternion.Euler(0.0f, _mainCamera.transform.eulerAngles.y, 0.0f) * new Vector3(_input.x, 0.0f, _input.y);
+        var targetRotation = Quaternion.LookRotation(_direction, Vector3.up);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+        /*var targetAngle = Mathf.Atan2(_direction.x, _direction.z) * Mathf.Rad2Deg;
         var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _currentVelocity, smoothTime);
-        transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
+        transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);*/
     }
 
     private void ApplyMovement()
     {
-        _characterController.Move(_direction * speed * Time.deltaTime);
+        var targetSpeed = movement.isSprinting ? movement.speed * movement.multiplier : movement.speed;
+        movement.currentSpeed = Mathf.MoveTowards(movement.currentSpeed, targetSpeed, movement.acceleration * Time.deltaTime);
+
+        _characterController.Move(_direction * movement.currentSpeed * Time.deltaTime);
     }
 
     //calls from the input system to allow the player to move with WASD
@@ -89,6 +102,11 @@ public class PlayerController : MonoBehaviour
         //_velocity = jumpStrength / _numberOfJumps;
     }
 
+    public void Sprint(InputAction.CallbackContext context)
+    {
+        movement.isSprinting = context.started || context.performed;
+    }
+
     private IEnumerator WaitForLanding()
     {
         yield return new WaitUntil(() => !IsGrounded());
@@ -100,4 +118,15 @@ public class PlayerController : MonoBehaviour
     }
 
     public bool IsGrounded() => _characterController.isGrounded;
+}
+
+[Serializable]
+public struct Movement
+{
+    public float speed;
+    public float multiplier;
+    public float acceleration;
+
+    [HideInInspector]public bool isSprinting;
+    [HideInInspector]public float currentSpeed;
 }

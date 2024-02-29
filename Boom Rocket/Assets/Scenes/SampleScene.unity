@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -574,13 +574,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.058315642, y: 0.000000042075126, z: -0.000000002457821, w: 0.99829817}
-  m_LocalPosition: {x: -63.1, y: 3.33, z: 26.4}
+  m_LocalRotation: {x: 0.192973, y: 0.000000041354664, z: -0.000000008133204, w: 0.9812041}
+  m_LocalPosition: {x: -50.23, y: 7.31, z: 22.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 6.686, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.253, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,7 +628,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1521145580}
-  smoothTime: 0.25
+  mouseSensitivity:
+    horizontal: 70
+    vertical: 70
+    invertHorizontal: 0
+    invertVertical: 1
+  cameraAngle:
+    min: 0
+    max: 90
 --- !u!43 &1011837156
 Mesh:
   m_ObjectHideFlags: 0
@@ -1884,6 +1891,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0d1be7e7-450d-4124-9cd5-00adc8f9a326
     m_ActionName: Gameplay/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194230}
+        m_TargetAssemblyTypeName: CameraManager, Assembly-CSharp
+        m_MethodName: Look
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 50acd24e-6f33-4141-99cb-54814f8bff12
+    m_ActionName: Gameplay/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1521145582}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Sprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 99094b99-0b5d-4dda-90a0-028bf2ab0ca8
+    m_ActionName: Gameplay/Sprint[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -2439,7 +2478,7 @@ Transform:
   m_GameObject: {fileID: 1521145574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63.1, y: 1.02, z: 39.8}
+  m_LocalPosition: {x: -50.23, y: 1.02, z: 39.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2487,7 +2526,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityMultiplier: 0.7
   smoothTime: 0.05
+  rotationSpeed: 500
   speed: 5
+  movement:
+    speed: 5
+    multiplier: 2
+    acceleration: 20
+    isSprinting: 0
+    currentSpeed: 0
   jumpStrength: 4
   maxNumberOfJumps: 2
 --- !u!43 &1719854468
