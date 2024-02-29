@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _characterController;
     private Vector3 _direction;
 
-    [SerializeField] private float smoothTime = 0.05f;
+    //[SerializeField] private float smoothTime = 0.05f;
     //private float _currentVelocity;
     private Camera _mainCamera;
     [SerializeField] private float rotationSpeed = 500f;
@@ -127,6 +127,6 @@ public struct Movement
     public float multiplier;
     public float acceleration;
 
-    [HideInInspector]public bool isSprinting;
-    [HideInInspector]public float currentSpeed;
+    [HideInInspector] public bool isSprinting;
+    [HideInInspector] public float currentSpeed;
 }
