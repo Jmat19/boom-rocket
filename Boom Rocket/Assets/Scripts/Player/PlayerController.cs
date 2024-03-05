@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 _direction;
 
     //[SerializeField] private float smoothTime = 0.05f;
-    //private float _currentVelocity;
+    private float currentVelocity;
     private Camera _mainCamera;
     [SerializeField] private float rotationSpeed = 500f;
 
@@ -25,8 +25,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Movement movement;
 
     [SerializeField] private float jumpStrength;
+    private float currentJumpStrength;
     private int _numberOfJumps;
     [SerializeField] private int maxNumberOfJumps = 2;
+
+    private void Start()
+    {
+        currentVelocity = _velocity;
+    }
 
     private void Awake()
     {
@@ -118,6 +124,19 @@ public class PlayerController : MonoBehaviour
     }
 
     public bool IsGrounded() => _characterController.isGrounded;
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        switch(hit.gameObject.tag)
+        {
+            case "SpeedBoost":
+                _velocity = currentVelocity * Time.deltaTime;
+                break;
+            case "JumpPad":
+                jumpStrength = 25f;
+                break;
+        }
+    }
 }
 
 [Serializable]
