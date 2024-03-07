@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     private float _velocity;
 
     private Vector2 _input;
-    private CharacterController _characterController;
-    private Vector3 _direction;
+    public CharacterController _characterController;
+    public Vector3 _direction;
 
     //[SerializeField] private float smoothTime = 0.05f;
     //private float currentVelocity;
