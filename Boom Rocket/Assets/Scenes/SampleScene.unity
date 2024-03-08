@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.42317688, g: 0.4541114, b: 0.47690457, a: 1}
+  m_IndirectSpecularColor: {r: 0.42317703, g: 0.45411164, b: 0.47690523, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1539,13 +1539,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1521145580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1353537065
+--- !u!43 &1413521064
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-51408(Clone)(Clone)(Clone)
+  m_Name: pb_Mesh-51408(Clone)(Clone)(Clone)(Clone)(Clone)
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1761,7 +1761,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1353537065}
+  m_Mesh: {fileID: 1413521064}
 --- !u!33 &1504008099
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -1769,7 +1769,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504008096}
-  m_Mesh: {fileID: 1353537065}
+  m_Mesh: {fileID: 1413521064}
 --- !u!23 &1504008100
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2051,7 +2051,7 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1353537065}
+  m_Mesh: {fileID: 1413521064}
   m_VersionIndex: 733
   m_IsSelectable: 1
   m_SelectedFaces: 
@@ -2074,7 +2074,7 @@ GameObject:
   - component: {fileID: 1521145581}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2209,17 +2209,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityMultiplier: 0.7
-  _characterController: {fileID: 0}
+  _characterController: {fileID: 1521145581}
   _direction: {x: 0, y: 0, z: 0}
   rotationSpeed: 500
   speed: 5
   movement:
-    speed: 10
+    speed: 15
     multiplier: 2
     acceleration: 20
     isSprinting: 0
     currentSpeed: 0
-  jumpStrength: 4
+  jumpStrength: 3
   maxNumberOfJumps: 2
 --- !u!114 &1521145583
 MonoBehaviour:

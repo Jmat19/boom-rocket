@@ -17,16 +17,17 @@ public class PlayerController : MonoBehaviour
     public Vector3 _direction;
 
     //[SerializeField] private float smoothTime = 0.05f;
-    //private float currentVelocity;
+    //[SerializeField] private float _currentVelocity;
     private Camera _mainCamera;
     [SerializeField] private float rotationSpeed = 500f;
 
     [SerializeField] private float speed;
-    [SerializeField] private Movement movement;
+    [SerializeField] private Sprint movement;
 
     [SerializeField] private float jumpStrength;
     private int _numberOfJumps;
     [SerializeField] private int maxNumberOfJumps = 2;
+
 
     private void Start()
     {
@@ -96,8 +97,6 @@ public class PlayerController : MonoBehaviour
         if (!IsGrounded() && _numberOfJumps >= maxNumberOfJumps) return;
         if (_numberOfJumps == 0) StartCoroutine(WaitForLanding());
 
-        // _numberOfJumps = _numberOfJumps + 1; {Alternate Code}
-        // _numberOfJumps += 1; {Alternate Code}
         _numberOfJumps++;
 
         //Used for equal jump strength
@@ -139,7 +138,7 @@ public class PlayerController : MonoBehaviour
 }
 
 [Serializable]
-public struct Movement
+public struct Sprint
 {
     public float speed;
     public float multiplier;
