@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.glairedaggers.sonke.Runtime", "com.glairedaggers.sonke.Runtime.csproj", "{FF52C3D5-5EBF-DBA6-2A45-18A0798F7E4B}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E35217C3-02FD-C520-05F3-5C0182C6133B}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF52C3D5-5EBF-DBA6-2A45-18A0798F7E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF52C3D5-5EBF-DBA6-2A45-18A0798F7E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF52C3D5-5EBF-DBA6-2A45-18A0798F7E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF52C3D5-5EBF-DBA6-2A45-18A0798F7E4B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E35217C3-02FD-C520-05F3-5C0182C6133B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E35217C3-02FD-C520-05F3-5C0182C6133B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E35217C3-02FD-C520-05F3-5C0182C6133B}.Release|Any CPU.ActiveCfg = Release|Any CPU
