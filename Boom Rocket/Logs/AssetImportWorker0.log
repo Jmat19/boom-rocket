@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/release' branch; Version is '2022.3.18f1 (d29bea25151d) revision 13802474'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'en' Physical Memory: 64661 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 7532 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-D:/Unity Game Engine/Unity Projects/boom-rocket/Boom Rocket
+C:/Users/TeamR/Documents/Unity Projects/boom-rocket/Boom Rocket
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62500
-Successfully changed project path to: D:/Unity Game Engine/Unity Projects/boom-rocket/Boom Rocket
-D:/Unity Game Engine/Unity Projects/boom-rocket/Boom Rocket
+65359
+Successfully changed project path to: C:/Users/TeamR/Documents/Unity Projects/boom-rocket/Boom Rocket
+C:/Users/TeamR/Documents/Unity Projects/boom-rocket/Boom Rocket
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,65 +49,67 @@ D:/Unity Game Engine/Unity Projects/boom-rocket/Boom Rocket
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [30780] Host "[IP] 10.0.0.77 [Port] 0 [Flags] 2 [Guid] 1430524536 [EditorId] 1430524536 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JM) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [11196] Host "[IP] 10.50.217.169 [Port] 0 [Flags] 2 [Guid] 1509599018 [EditorId] 1509599018 [Version] 1048832 [Id] WindowsEditor(7,Jordy) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [30780] Host "[IP] 10.0.0.77 [Port] 0 [Flags] 2 [Guid] 1430524536 [EditorId] 1430524536 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JM) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [11196] Host "[IP] 10.50.217.169 [Port] 0 [Flags] 2 [Guid] 1509599018 [EditorId] 1509599018 [Version] 1048832 [Id] WindowsEditor(7,Jordy) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 3.40 ms, found 3 plugins.
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 21.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.18f1 (d29bea25151d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Unity Game Engine/Unity Projects/boom-rocket/Boom Rocket/Assets
+[Subsystems] Discovering subsystems at path C:/Users/TeamR/Documents/Unity Projects/boom-rocket/Boom Rocket/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon RX 6950 XT (ID=0x73a5)
-    Vendor:   ATI
-    VRAM:     16337 MB
-    Driver:   31.0.24019.1006
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6010 MB
+    Driver:   31.0.15.4633
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56544
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005409 seconds.
-- Loaded All Assemblies, in  0.193 seconds
+Registered in 0.028236 seconds.
+- Loaded All Assemblies, in  0.673 seconds
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.153 seconds
-Domain Reload Profiling: 345ms
-	BeginReloadAssembly (62ms)
+- Finished resetting the current domain, in  0.327 seconds
+Domain Reload Profiling: 995ms
+	BeginReloadAssembly (237ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (19ms)
-	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (70ms)
-		LoadAssemblies (61ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (64ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (133ms)
+	LoadAllAssembliesAndSetupDomain (219ms)
+		LoadAssemblies (236ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (69ms)
-			TypeCache.Refresh (68ms)
-				TypeCache.ScanAssembly (61ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (153ms)
+		AnalyzeDomain (214ms)
+			TypeCache.Refresh (212ms)
+				TypeCache.ScanAssembly (188ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (327ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (121ms)
+		SetupLoadedEditorAssemblies (253ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (84ms)
-			ProcessInitializeOnLoadMethodAttributes (26ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (170ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +117,56 @@ Domain Reload Profiling: 345ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.386 seconds
-Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.302 seconds
+Refreshing native plugins compatible for Editor in 8.10 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.388 seconds
-Domain Reload Profiling: 773ms
-	BeginReloadAssembly (93ms)
+- Finished resetting the current domain, in  1.092 seconds
+Domain Reload Profiling: 2394ms
+	BeginReloadAssembly (279ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (13ms)
-	RebuildCommonClasses (18ms)
-	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (242ms)
-		LoadAssemblies (181ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (900ms)
+		LoadAssemblies (798ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (113ms)
-			TypeCache.Refresh (99ms)
-				TypeCache.ScanAssembly (90ms)
-			ScanForSourceGeneratedMonoScriptInfo (11ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (388ms)
+		AnalyzeDomain (284ms)
+			TypeCache.Refresh (249ms)
+				TypeCache.ScanAssembly (223ms)
+			ScanForSourceGeneratedMonoScriptInfo (25ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1093ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (298ms)
+		SetupLoadedEditorAssemblies (864ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (41ms)
-			ProcessInitializeOnLoadAttributes (232ms)
-			ProcessInitializeOnLoadMethodAttributes (12ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (734ms)
+			ProcessInitializeOnLoadMethodAttributes (24ms)
 			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 5.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4004 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 57 unused Assets / (178.5 KB). Loaded Objects now: 4467.
-Memory consumption went from 151.2 MB to 151.1 MB.
-Total: 2.325000 ms (FindLiveObjects: 0.192000 ms CreateObjectMapping: 0.073400 ms MarkObjects: 1.950800 ms  DeleteObjects: 0.108400 ms)
+Unloading 4024 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 57 unused Assets / (178.6 KB). Loaded Objects now: 4487.
+Memory consumption went from 151.4 MB to 151.2 MB.
+Total: 8.295900 ms (FindLiveObjects: 0.700500 ms CreateObjectMapping: 0.134900 ms MarkObjects: 6.949600 ms  DeleteObjects: 0.508900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,86 +183,319 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 242643.880954 seconds.
-  path: Assets/Ragdoll-Engine-main
-  artifactKey: Guid(216774281d6a9b147b321fdcdb5163b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ragdoll-Engine-main using Guid(216774281d6a9b147b321fdcdb5163b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f49f17e280af98ee28836ec4de57114e') in 0.001592 seconds
+  Time since last request: 601769.119698 seconds.
+  path: Assets/Input/PlayerInput.inputactions
+  artifactKey: Guid(f0f5d20a1eac90c4e9db76c7450bdea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Input/PlayerInput.inputactions using Guid(f0f5d20a1eac90c4e9db76c7450bdea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e4951e76b2d2c6242580bc3f4d0285e') in 0.015739 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 14.247927 seconds.
+  path: Assets/com.glairedaggers.sonke-main
+  artifactKey: Guid(cf3766771c2be5e48b590d97881b1571) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main using Guid(cf3766771c2be5e48b590d97881b1571) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dba7363807de63df43391330dcaf4aa') in 0.000464 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.817261 seconds.
-  path: Assets/Ragdoll-Engine-main/Ragdoll-Engine-main
-  artifactKey: Guid(42304ae007f6d034abbb445952323f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ragdoll-Engine-main/Ragdoll-Engine-main using Guid(42304ae007f6d034abbb445952323f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a732a5a36e85b6977dd99f499df5bdcf') in 0.000222 seconds
+  Time since last request: 0.474900 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main
+  artifactKey: Guid(8aeac34dde800364cadf32f635579410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main using Guid(8aeac34dde800364cadf32f635579410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69e4a36846f67c7501c3e357c5b1925b') in 0.000591 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 3.150403 seconds.
-  path: Assets/Ragdoll-Engine-main/Ragdoll-Engine-main/Assets
-  artifactKey: Guid(f0c03b9d121fdb54890086cdfcae7732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ragdoll-Engine-main/Ragdoll-Engine-main/Assets using Guid(f0c03b9d121fdb54890086cdfcae7732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9b58940af47b0525998cf13453fb020') in 0.000300 seconds
+  Time since last request: 1.388883 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime
+  artifactKey: Guid(4df44d8fbd77466a792f4630729e4eeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime using Guid(4df44d8fbd77466a792f4630729e4eeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b0364e084d0988ecf4cc2da24b2ba31') in 0.000507 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 9.249155 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '044178baa9739b202748beac76af8483') in 0.000282 seconds
+  Time since last request: 0.065610 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/com.glairedaggers.sonke.Runtime.asmdef
+  artifactKey: Guid(18b3228ed5e69f3c5a1ada4362c31a46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/com.glairedaggers.sonke.Runtime.asmdef using Guid(18b3228ed5e69f3c5a1ada4362c31a46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c9e291e12e3242499dd58fd20dca1a9') in 0.000579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.677743 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(6542a28f4dba9ab4fa8504e5aab4c541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(6542a28f4dba9ab4fa8504e5aab4c541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e964452354cb7e85154d80f69d7d979a') in 0.000664 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.233846 seconds.
+  path: Assets/Scenes/LevelTest.unity
+  artifactKey: Guid(b2601c7e12e42ba4db366832c6ec469d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/LevelTest.unity using Guid(b2601c7e12e42ba4db366832c6ec469d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0576ed5f0a53f37b807f1ba8f23c6373') in 0.000565 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.843887 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions
+  artifactKey: Guid(0777dad51607f4238a7fcbd160376c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions using Guid(0777dad51607f4238a7fcbd160376c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad9609d82df11e1f20dca66f9198e1a4') in 0.000485 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.369359 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions/JumpAction.cs
+  artifactKey: Guid(dc4b6a5f0dbb74a4ea4eaf6b63728748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions/JumpAction.cs using Guid(dc4b6a5f0dbb74a4ea4eaf6b63728748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a903e7aad660b53a93ab7661695fac4') in 0.000598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 129.257566 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions/PlayerActionBase.cs
+  artifactKey: Guid(6437c96c75939bc469f286e9d6c18f31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions/PlayerActionBase.cs using Guid(6437c96c75939bc469f286e9d6c18f31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c4372b161547ac350822006d1d896b6') in 0.000702 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.180036 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements
+  artifactKey: Guid(e6d87516de482736d9c86c866f422d38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements using Guid(e6d87516de482736d9c86c866f422d38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbf6c06477eb6e4802ace4ff922405fc') in 0.000662 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.027132 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements/HomingTarget.cs
+  artifactKey: Guid(a8fb36fa77e8c084f9f8625cde6f9428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements/HomingTarget.cs using Guid(a8fb36fa77e8c084f9f8625cde6f9428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f52c3f9f7e94fd73170f256d70d763e8') in 0.000871 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.621710 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements/IHomingPointProvider.cs
+  artifactKey: Guid(b96a5ac4d1232baf5ab1ad5988a50a91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements/IHomingPointProvider.cs using Guid(b96a5ac4d1232baf5ab1ad5988a50a91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a5fa94da72b1478f2a663593d299d8') in 0.000653 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.619327 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements/Rail.cs
+  artifactKey: Guid(cfa344e1c712a7571b4d4e7ec5ca09bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements/Rail.cs using Guid(cfa344e1c712a7571b4d4e7ec5ca09bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8f1709fc70c17320709941b05d82ad') in 0.000852 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.819999 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements/Spring.cs
+  artifactKey: Guid(0c5abe142a42991af82eea1d707129d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Elements/Spring.cs using Guid(0c5abe142a42991af82eea1d707129d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fab94eeb21fb175b974776900d8a15') in 0.000749 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.076476 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Physics
+  artifactKey: Guid(bc6bb5b36c9f4e18ab55a70a49cceb24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Physics using Guid(bc6bb5b36c9f4e18ab55a70a49cceb24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aceecf60c5ec9d7ffc2c06e653dcc5e') in 0.000536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.708080 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Physics/PlayerPhysics.cs
+  artifactKey: Guid(63f844eb60c2f75c9ac034f293b365b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Physics/PlayerPhysics.cs using Guid(63f844eb60c2f75c9ac034f293b365b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc917ddb8d893cf1e16da770e0e2ee1') in 0.000567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 56.695826 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Animation
+  artifactKey: Guid(a7a88bd43624999d3967bcf6406d882c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Animation using Guid(a7a88bd43624999d3967bcf6406d882c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d5b7cfbd5fcd392b05a83bd1964f3ab') in 0.000493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.415006 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Input
+  artifactKey: Guid(fcb90bd48954681fa986ee3988b0048f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Input using Guid(fcb90bd48954681fa986ee3988b0048f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb71448a8fcab0a93337731607565dd') in 0.001107 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.476368 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Utils
+  artifactKey: Guid(2d9b9bc11bbb7d491b04d442caaa689e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Utils using Guid(2d9b9bc11bbb7d491b04d442caaa689e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df4f983372667204ff12f50642f566c1') in 0.000625 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.066751 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Utils/BezierCurve
+  artifactKey: Guid(41c25095c8b7652a1836ebbcacbf853a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Utils/BezierCurve using Guid(41c25095c8b7652a1836ebbcacbf853a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5967431a8f1640071d1ac4e2348197ef') in 0.000707 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.815716 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Animation/PlayerAnimationController.cs
+  artifactKey: Guid(bd6bae86420285414a2de50c088fa6b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Animation/PlayerAnimationController.cs using Guid(bd6bae86420285414a2de50c088fa6b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '299a1f7a595d0c774cd60b9bd78cb12b') in 0.000512 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 46.256035 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/package.json
+  artifactKey: Guid(b05bda51e7b50cb409997e3128aef8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/package.json using Guid(b05bda51e7b50cb409997e3128aef8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71840332098b1c81e85d50dad0a386b3') in 0.002224 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 11.985753 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Examples
+  artifactKey: Guid(38881906ba058e6b7a456d5783497d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Examples using Guid(38881906ba058e6b7a456d5783497d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886d12ab44a100be446268ba1e2d26ef') in 0.000864 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6053.731389 seconds.
+  path: Assets/Player 1.prefab
+  artifactKey: Guid(86ac87dd453f13346bc80301ce271e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player 1.prefab using Guid(86ac87dd453f13346bc80301ce271e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14541e3aa5fd8510f9b2bc3632a550b') in 1.516508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 7.165590 seconds.
+  path: Assets/Player Copy.prefab
+  artifactKey: Guid(86ac87dd453f13346bc80301ce271e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player Copy.prefab using Guid(86ac87dd453f13346bc80301ce271e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6de218e6e2c62395d74615f57469a95') in 0.021727 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 37.944419 seconds.
+  path: Assets/Input
+  artifactKey: Guid(87a710ac49f940949ac6f2e0d9619699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Input using Guid(87a710ac49f940949ac6f2e0d9619699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30c6b07f830ccaf674d4a59273fd39c0') in 0.001157 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 9.042881 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Input/PlayerInput.cs
+  artifactKey: Guid(33215fe6fe89b054ebfebd3927e16c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Input/PlayerInput.cs using Guid(33215fe6fe89b054ebfebd3927e16c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23eb86a94fc99fe1d1e6b99978ff79ee') in 0.001590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.118153 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Input/ActionSet.cs
+  artifactKey: Guid(86b06439d6d9fd8898595e586d8c9147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Input/ActionSet.cs using Guid(86b06439d6d9fd8898595e586d8c9147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6630fea052f0151297ce47bf7a6fba51') in 0.001234 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 13.704198 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions/BounceAction.cs
+  artifactKey: Guid(ce8ec87d3543f3bc28838841fc826594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions/BounceAction.cs using Guid(ce8ec87d3543f3bc28838841fc826594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75cbe194ff8e25cebf165af6394ab0e0') in 0.003227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.517420 seconds.
+  path: Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions/JumpDashAction.cs
+  artifactKey: Guid(977326a65b8d5194295d00567f4ac15c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/com.glairedaggers.sonke-main/com.glairedaggers.sonke-main/Runtime/Actions/JumpDashAction.cs using Guid(977326a65b8d5194295d00567f4ac15c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '611ad098353ad8c4489345f35d5f358d') in 0.001430 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1579.427148 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(9dd4c1605a952834bb85ef6108b22e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(9dd4c1605a952834bb85ef6108b22e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e1230742703a53e30476dd35f13a09c') in 0.004570 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.294428 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(1af293e0860f2234aad4653dfc9e2942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(1af293e0860f2234aad4653dfc9e2942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e87c7b235abe191a7ec9f7ae99ce3db6') in 0.003164 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.275 seconds
-Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+- Loaded All Assemblies, in  2.191 seconds
+Refreshing native plugins compatible for Editor in 8.38 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.534 seconds
-Domain Reload Profiling: 807ms
-	BeginReloadAssembly (100ms)
+- Finished resetting the current domain, in  4.602 seconds
+Domain Reload Profiling: 6789ms
+	BeginReloadAssembly (810ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
+		DisableScriptedObjects (30ms)
 		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (23ms)
-	RebuildCommonClasses (19ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (18ms)
-	LoadAllAssembliesAndSetupDomain (129ms)
-		LoadAssemblies (161ms)
+		ReleaseScriptingObjects (2ms)
+		CreateAndSetChildDomain (352ms)
+	RebuildCommonClasses (74ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (72ms)
+	LoadAllAssembliesAndSetupDomain (1210ms)
+		LoadAssemblies (1453ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (17ms)
-			TypeCache.Refresh (5ms)
+		AnalyzeDomain (35ms)
+			TypeCache.Refresh (15ms)
 				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (8ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (534ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (4603ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (280ms)
+		SetupLoadedEditorAssemblies (1409ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (2ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (43ms)
-			ProcessInitializeOnLoadAttributes (216ms)
-			ProcessInitializeOnLoadMethodAttributes (10ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
+			BeforeProcessingInitializeOnLoad (161ms)
+			ProcessInitializeOnLoadAttributes (1161ms)
+			ProcessInitializeOnLoadMethodAttributes (43ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Refreshing native plugins compatible for Editor in 1.03 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 9.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3996 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 27 unused Assets / (166.9 KB). Loaded Objects now: 4502.
-Memory consumption went from 147.2 MB to 147.0 MB.
-Total: 2.101500 ms (FindLiveObjects: 0.152900 ms CreateObjectMapping: 0.056600 ms MarkObjects: 1.821900 ms  DeleteObjects: 0.069700 ms)
+Unloading 26 unused Assets / (149.7 KB). Loaded Objects now: 4513.
+Memory consumption went from 151.4 MB to 151.2 MB.
+Total: 16.897700 ms (FindLiveObjects: 0.829200 ms CreateObjectMapping: 0.312000 ms MarkObjects: 15.491200 ms  DeleteObjects: 0.263400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
