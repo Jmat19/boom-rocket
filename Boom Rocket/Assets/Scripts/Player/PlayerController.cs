@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private float _gravity = -9.81f;
-    [SerializeField] private float gravityMultiplier = 3.0f;
+    [SerializeField] private float gravityMultiplier = 0f;
     private float _velocity;
 
     private Vector2 _input;

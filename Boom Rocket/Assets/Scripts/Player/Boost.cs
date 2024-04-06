@@ -1,79 +1,118 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Windows;
 
 public class Boost : MonoBehaviour
 {
-    /*[Header("Reference")]
+    [Header("References")]
     public Transform orientation;
-    public Transform playerCamera;
-    private CharacterController charCon;
-    private PlayerController pc;
+    public Transform playerCam;
+    private Rigidbody rb;
+    private PlayerMovement pm;
 
-    [Header("Dashing")]
+    [Header("Boosting")]
     public float boostForce;
     public float boostUpwardForce;
+    public float maxBoostYSpeed;
     public float boostDuration;
+
+    [Header("CameraEffects")]
+    public PlayerCam cam;
+    public float boostFov;
+
+    [Header("Settings")]
+    public bool useCameraForward = true;
+    public bool allowAllDirections = true;
+    public bool disableGravity = false;
+    public bool resetVel = true;
 
     [Header("Cooldown")]
     public float boostCd;
     private float boostCdTimer;
 
+    [Header("Input")]
+    public KeyCode boostKey = KeyCode.E;
+
     private void Start()
     {
-        charCon = GetComponent<CharacterController>();
-        pc = GetComponent<PlayerController>();
+        rb = GetComponent<Rigidbody>();
+        pm = GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(boostKey))
+            Dash();
+
+        if (boostCdTimer > 0)
+            boostCdTimer -= Time.deltaTime;
     }
 
-    private void Dash(InputAction.CallbackContext context)
+    private void Dash()
     {
-        Vector3 forceToApply = orientation.forward * boostForce + orientation.up * boostUpwardForce;
+        if (boostCdTimer > 0) return;
+        else boostCdTimer = boostCd;
 
-        charCon.SimpleMove(forceToApply * boostForce);
+        pm.boosting = true;
+        pm.maxYSpeed = maxBoostYSpeed;
+
+        cam.DoFov(boostFov);
+
+        Transform forwardT;
+
+        if (useCameraForward)
+            forwardT = playerCam; /// where you're looking
+        else
+            forwardT = orientation; /// where you're facing (no up or down)
+
+        Vector3 direction = GetDirection(forwardT);
+
+        Vector3 forceToApply = direction * boostForce + orientation.up * boostUpwardForce;
+
+        if (disableGravity)
+            rb.useGravity = false;
+
+        delayedForceToApply = forceToApply;
+        Invoke(nameof(DelayedBoostForce), 0.025f);
 
         Invoke(nameof(ResetBoost), boostDuration);
     }
 
+    private Vector3 delayedForceToApply;
+    private void DelayedBoostForce()
+    {
+        if (resetVel)
+            rb.velocity = Vector3.zero;
+
+        rb.AddForce(delayedForceToApply, ForceMode.Impulse);
+    }
+
     private void ResetBoost()
     {
+        pm.boosting = false;
+        pm.maxYSpeed = 0;
 
-    }*/
+        cam.DoFov(85f);
 
-    PlayerController conScript;
-
-    public float boostSpeed;
-    public float boostTime;
-    private void Start()
-    {
-        conScript = GetComponent<PlayerController>();
+        if (disableGravity)
+            rb.useGravity = true;
     }
 
-    private void Update()
+    private Vector3 GetDirection(Transform forwardT)
     {
-        
-    }
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
 
-    public void Boosting(InputAction.CallbackContext context)
-    {
-        StartCoroutine(Boosting());
-    }
+        Vector3 direction = new Vector3();
 
-    IEnumerator Boosting()
-    {
-        float startTime = Time.time;
+        if (allowAllDirections)
+            direction = forwardT.forward * verticalInput + forwardT.right * horizontalInput;
+        else
+            direction = forwardT.forward;
 
-        while(Time.time < startTime + boostTime)
-        {
-            conScript._characterController.Move(conScript._direction * boostSpeed * Time.deltaTime);
+        if (verticalInput == 0 && horizontalInput == 0)
+            direction = forwardT.forward;
 
-            yield return null;
-        }
+        return direction.normalized;
     }
 }

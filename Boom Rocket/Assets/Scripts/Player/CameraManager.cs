@@ -15,7 +15,7 @@ public class CameraManager : MonoBehaviour
     private Vector2 _input;
 
     [SerializeField] private MouseSensitivity mouseSensitivity;
-    [SerializeField]private CameraAngle cameraAngle;
+    [SerializeField] private CameraAngle cameraAngle;
 
     private CameraRotation _cameraRotation;
 
