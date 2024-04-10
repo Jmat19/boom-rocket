@@ -9,11 +9,16 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     public float sprintSpeed;
+    public float slideSpeed;
+    public float wallrunSpeed;
 
     public float boostSpeed;
     public float boostSpeedChangeFactor;
 
     public float maxYSpeed;
+
+    public float speedIncreaseMult;
+    public float slopeIncreaseMult;
 
     public float groundDrag;
 
@@ -58,12 +63,16 @@ public class PlayerMovement : MonoBehaviour
     {
         walking,
         sprinting,
+        wallrunning,
         crouching,
+        sliding,
         boosting,
         air
     }
 
     public bool boosting;
+    public bool sliding;
+    public bool wallrunning;
 
     private void Start()
     {
@@ -90,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
         else
             rb.drag = 0;
 
-        TextStuff();
+        TextUI();
     }
 
     private void FixedUpdate()
@@ -133,12 +142,30 @@ public class PlayerMovement : MonoBehaviour
     private bool keepMomentum;
     private void StateHandler()
     {
+        // Mode - wallrunning
+        if (wallrunning)
+        {
+            state = MovementState.wallrunning;
+            desiredMoveSpeed = wallrunSpeed;
+        }
+
         // Mode - Dashing
         if (boosting)
         {
             state = MovementState.boosting;
             desiredMoveSpeed = boostSpeed;
             speedChangeFactor = boostSpeedChangeFactor;
+        }
+
+        //Mode - Sliding
+        else if (sliding)
+        {
+            state = MovementState.sliding;
+
+            if (OnSlope() && rb.velocity.y < 0.1f)
+                desiredMoveSpeed = slideSpeed;
+            else
+                desiredMoveSpeed = sprintSpeed;
         }
 
         // Mode - Crouching
@@ -190,6 +217,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // check if desiredMoveSpeed has changed drastically
+        if(Mathf.Abs(desiredMoveSpeed - lastDesiredMoveSpeed) > 4f && moveSpeed != 0)
+        {
+            StopAllCoroutines();
+            StartCoroutine(SmoothlyLerpMoveSpeed());
+        }
+        else
+        {
+            moveSpeed = desiredMoveSpeed;
+        }
+
         lastDesiredMoveSpeed = desiredMoveSpeed;
         lastState = state;
     }
@@ -208,7 +246,15 @@ public class PlayerMovement : MonoBehaviour
         {
             moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
 
-            time += Time.deltaTime * boostFactor;
+            if (OnSlope())
+            {
+                float slopeAngle = Vector3.Angle(Vector3.up, slopeHit.normal);
+                float slopeAngleIncrease = 1 + (slopeAngle / 90f);
+
+                time += Time.deltaTime * speedIncreaseMult * slopeIncreaseMult * slopeAngleIncrease;
+            }
+            else
+                time += Time.deltaTime * speedIncreaseMult;
 
             yield return null;
         }
@@ -228,7 +274,7 @@ public class PlayerMovement : MonoBehaviour
         // on slope
         if (OnSlope() && !exitingSlope)
         {
-            rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force);
+            rb.AddForce(GetSlopeMoveDirection(moveDirection) * moveSpeed * 20f, ForceMode.Force);
 
             if (rb.velocity.y > 0)
                 rb.AddForce(Vector3.down * 80f, ForceMode.Force);
@@ -289,7 +335,7 @@ public class PlayerMovement : MonoBehaviour
         exitingSlope = false;
     }
 
-    private bool OnSlope()
+    public bool OnSlope()
     {
         if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight * 0.5f + 0.3f))
         {
@@ -300,15 +346,15 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    private Vector3 GetSlopeMoveDirection()
+    public Vector3 GetSlopeMoveDirection(Vector3 direction)
     {
-        return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
+        return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
     }
 
     public TextMeshProUGUI text_speed;
     public TextMeshProUGUI text_ySpeed;
     public TextMeshProUGUI text_mode;
-    private void TextStuff()
+    private void TextUI()
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
@@ -329,5 +375,18 @@ public class PlayerMovement : MonoBehaviour
     {
         float mult = Mathf.Pow(10.0f, (float)digits);
         return Mathf.Round(value * mult) / mult;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        switch (hit.gameObject.tag)
+        {
+            case "SpeedBoost":
+                moveSpeed = 50f;
+                break;
+            case "JumpPad":
+                jumpForce = 8f;
+                break;
+        }
     }
 }
