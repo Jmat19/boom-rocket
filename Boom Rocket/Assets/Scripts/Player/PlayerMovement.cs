@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public float boostSpeed;
     public float boostSpeedChangeFactor;
 
+    private float desiredMoveSpeed;
+    private float lastDesiredMoveSpeed;
+
     public float maxYSpeed;
 
     public float speedIncreaseMult;
@@ -105,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        //GetComponent<Rigidbody>().AddForce(Physics.gravity * 2f, ForceMode.Acceleration);
     }
 
     private void MyInput()
@@ -136,8 +140,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private float desiredMoveSpeed;
-    private float lastDesiredMoveSpeed;
     private MovementState lastState;
     private bool keepMomentum;
     private void StateHandler()
@@ -377,9 +379,10 @@ public class PlayerMovement : MonoBehaviour
         return Mathf.Round(value * mult) / mult;
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    // need to replace Character Controller with Rigidbody
+    private void OnCollisionEnter(Collision coll)
     {
-        switch (hit.gameObject.tag)
+        switch (coll.gameObject.tag)
         {
             case "SpeedBoost":
                 moveSpeed = 50f;
