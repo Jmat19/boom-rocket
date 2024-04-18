@@ -40,14 +40,14 @@ public class WallRunning : MonoBehaviour
 
     [Header("References")]
     public Transform orientation;
-    private PlayerMovement pm;
+    private PlayerMove pm;
     private Rigidbody rb;
 
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        pm = GetComponent<PlayerMovement>();
+        pm = GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ public class Boost : MonoBehaviour
     public Transform orientation;
     public Transform playerCam;
     private Rigidbody rb;
-    private PlayerMovement pm;
+    private PlayerMove pm;
 
     [Header("Boosting")]
     public float boostForce;
@@ -31,7 +31,7 @@ public class Boost : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        pm = GetComponent<PlayerMovement>();
+        pm = GetComponent<PlayerMove>();
     }
 
     private void Update()

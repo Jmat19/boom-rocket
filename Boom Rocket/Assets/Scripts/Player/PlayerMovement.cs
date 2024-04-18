@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     [Header("Movement")]
     private float moveSpeed;
@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     public float slopeIncreaseMult;
 
     public float groundDrag;
+
+    public float fallSpeed;
+    public float maxFallSpeed;
 
     [Header("Jumping")]
     public float jumpForce;
@@ -380,9 +383,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // need to replace Character Controller with Rigidbody
-    private void OnCollisionEnter(Collision coll)
+   /* private void OnCollisionEnter(Collision coll)
     {
-        switch (coll.gameObject.tag)
+        switch (coll.gameObject.tag) // need to apply Coroutine as a timer for the speed boost
         {
             case "SpeedBoost":
                 moveSpeed = 50f;
@@ -391,5 +394,5 @@ public class PlayerMovement : MonoBehaviour
                 jumpForce = 8f;
                 break;
         }
-    }
+    }*/
 }
