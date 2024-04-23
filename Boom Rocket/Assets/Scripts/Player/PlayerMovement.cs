@@ -34,15 +34,15 @@ public class PlayerMove : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
 
-    [Header("Crouching")]
+    /*[Header("Crouching")]
     public float crouchSpeed;
-    public float crouchYScale;
+    public float crouchYScale;*/
     private float startYScale;
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
-    public KeyCode crouchKey = KeyCode.LeftControl;
+    //public KeyCode crouchKey = KeyCode.LeftControl;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -60,6 +60,8 @@ public class PlayerMove : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
+    public float gravityMult = 1.07f;
+
     Vector3 moveDirection;
 
     Rigidbody rb;
@@ -70,7 +72,7 @@ public class PlayerMove : MonoBehaviour
         walking,
         sprinting,
         wallrunning,
-        crouching,
+        //crouching,
         sliding,
         boosting,
         air
@@ -100,7 +102,7 @@ public class PlayerMove : MonoBehaviour
         StateHandler();
 
         // handle drag
-        if (state == MovementState.walking || state == MovementState.sprinting || state == MovementState.crouching)
+        if (state == MovementState.walking || state == MovementState.sprinting /*|| state == MovementState.crouching*/)
             rb.drag = groundDrag;
         else
             rb.drag = 0;
@@ -111,7 +113,7 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
-        //GetComponent<Rigidbody>().AddForce(Physics.gravity * 2f, ForceMode.Acceleration);
+        GetComponent<Rigidbody>().AddForce(Physics.gravity * 2f, ForceMode.Acceleration);
     }
 
     private void MyInput()
@@ -130,7 +132,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         // start crouch
-        if (Input.GetKeyDown(crouchKey))
+        /*if (Input.GetKeyDown(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
@@ -140,7 +142,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyUp(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
-        }
+        }*/
     }
 
     private MovementState lastState;
@@ -174,11 +176,11 @@ public class PlayerMove : MonoBehaviour
         }
 
         // Mode - Crouching
-        else if (Input.GetKey(crouchKey))
+        /*else if (Input.GetKey(crouchKey))
         {
             state = MovementState.crouching;
             desiredMoveSpeed = crouchSpeed;
-        }
+        }*/
 
         // Mode - Sprinting
         else if (grounded && Input.GetKey(sprintKey))
@@ -329,7 +331,7 @@ public class PlayerMove : MonoBehaviour
         exitingSlope = true;
 
         // reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        rb.velocity = new Vector3(Physics.gravity.x, Physics.gravity.y * gravityMult, Physics.gravity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }

@@ -371,6 +371,8 @@
 "Assets/Scripts/Camera/ThirdPersonCam.cs"
 "Assets/Scripts/Player/Boost.cs"
 "Assets/Scripts/Player/CameraManager.cs"
+"Assets/Scripts/Player/Hold On/Character.cs"
+"Assets/Scripts/Player/Hold On/Jump.cs"
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/Sliding.cs"
