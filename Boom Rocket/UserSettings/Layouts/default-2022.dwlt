@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -213,8 +213,8 @@ MonoBehaviour:
     y: 0
     width: 222.4
     height: 490.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -438,7 +438,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 78edffffc4f7ffff0efbffff0867000060670000
+      m_ExpandedIDs: 3abaffff0efbffff7e6300001069000092690000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -852,9 +852,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -10.654413, y: -14.413057, z: -278.6002}
+    m_Target: {x: -57.156208, y: 3.6120415, z: -209.0399}
     speed: 2
-    m_Value: {x: -10.654413, y: -14.413057, z: -278.6002}
+    m_Value: {x: -57.156208, y: 3.6120415, z: -209.0399}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -900,13 +900,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.34663972, y: 0.10069224, z: -0.038721327, w: -0.9323226}
+    m_Target: {x: 0.26732558, y: 0.08284054, z: -0.02165852, w: 0.96106076}
     speed: 2
-    m_Value: {x: -0.34650877, y: 0.09952251, z: -0.038285762, w: -0.9319663}
+    m_Value: {x: 0.2635943, y: 0.08051143, z: -0.020700265, w: 0.96104497}
   m_Size:
-    m_Target: 9.398975
+    m_Target: 18.181961
     speed: 2
-    m_Value: 9.841859
+    m_Value: 18.181961
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -976,7 +976,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Stage
+    - Assets/SciFi Warehouse Kit/Prefabs/Structures/Catwalk
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -984,16 +984,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Stage
+  - Assets/SciFi Warehouse Kit/Prefabs/Structures/Catwalk
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\TeamR\Documents\Unity Projects\boom-rocket\Boom Rocket
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 256.6}
-    m_SelectedIDs: fc6d0000
-    m_LastClickedID: 28156
-    m_ExpandedIDs: 00000000d06c0000d26c0000d46c0000d66c0000d86c0000da6c0000dc6c0000de6c0000e06c0000e26c0000e46c0000e66c0000e86c0000ea6c0000ec6c00006e6d0000986d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 736.6}
+    m_SelectedIDs: 98810200
+    m_LastClickedID: 164248
+    m_ExpandedIDs: 000000000e70000010700000127000001470000016700000187000001a7000001c7000001e70000020700000227000002470000026700000287000002a7000002c7000002e700000ce700000f27e0200f67e0200fc7e0200fe7e0200027f020056830200b8830200ba83020000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1021,7 +1021,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d06c0000d26c0000d46c0000d66c0000d86c0000da6c0000dc6c0000de6c0000e06c0000e26c0000e46c0000e66c0000e86c0000ea6c0000ec6c0000
+    m_ExpandedIDs: 000000000e70000010700000127000001470000016700000187000001a7000001c7000001e70000020700000227000002470000026700000287000002a7000002c7000002e700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1049,7 +1049,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000fe72000000000000
+    m_ExpandedInstanceIDs: c6230000fe72000000000000ec830200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1152,7 +1152,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 301.60004
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

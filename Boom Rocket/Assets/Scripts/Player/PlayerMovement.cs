@@ -60,7 +60,7 @@ public class PlayerMove : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
-    public float gravityMult = 1.07f;
+    public float gravityMult = 9f;
 
     Vector3 moveDirection;
 
