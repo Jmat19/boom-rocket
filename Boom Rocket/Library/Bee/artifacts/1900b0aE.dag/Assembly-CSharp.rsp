@@ -377,6 +377,8 @@
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/Sliding.cs"
 "Assets/Scripts/Player/WallRunning.cs"
+"Assets/Scripts/Stage/LightFlickerEffect.cs"
+"Assets/Scripts/Stage/MoveTexture.cs"
 "Assets/Scripts/Stage/MovingPlatform.cs"
 "Assets/Scripts/Stage/RespawnScript.cs"
 "Assets/Scripts/Stage/Waypoint.cs"

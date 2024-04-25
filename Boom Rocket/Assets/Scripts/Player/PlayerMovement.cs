@@ -90,6 +90,9 @@ public class PlayerMove : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
+
+        //Increase gravity
+        Physics.gravity = new Vector3(0, -18, 0);
     }
 
     private void Update()
