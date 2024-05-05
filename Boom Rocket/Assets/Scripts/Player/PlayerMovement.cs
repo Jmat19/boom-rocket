@@ -125,14 +125,33 @@ public class PlayerMove : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
-        if (Input.GetKey(jumpKey) && readyToJump && grounded)
+        /* if (Input.GetKey(jumpKey) && readyToJump && grounded)
+         {
+             readyToJump = false;
+
+             Jump();
+
+             Invoke(nameof(ResetJump), jumpCooldown);
+         } */
+
+        bool isJumping = false;
+
+        if (Input.GetKey(jumpKey) && readyToJump && grounded && !isJumping)
         {
+            isJumping = true; // Set jumping flag
+
             readyToJump = false;
-
             Jump();
-
-            Invoke(nameof(ResetJump), jumpCooldown);
+            ResetJump();
+            //Invoke(nameof(ResetJump), jumpCooldown);
         }
+
+        // Reset the jumping flag when the player lands on the ground
+        if (grounded)
+        {
+            isJumping = false;
+        }
+
 
         // start crouch
         /*if (Input.GetKeyDown(crouchKey))

@@ -54,11 +54,21 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.SetParent(transform);
+        //other.transform.SetParent(transform);
+        if (other.gameObject.tag == "Player")
+        {
+            other.transform.parent = transform;
+
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.transform.SetParent(null);
+        //other.transform.SetParent(null);
+        if (other.gameObject.tag == "Player")
+        {
+            other.transform.parent = null;
+
+        }
     }
 }
